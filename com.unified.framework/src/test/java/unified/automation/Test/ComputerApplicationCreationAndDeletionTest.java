@@ -43,40 +43,52 @@ public class ComputerApplicationCreationAndDeletionTest extends TestInitializati
 			ComputerCreationPage computerCreationPage=PageFactory.initElements(driver, ComputerCreationPage.class);
 			ComputerEditPage computerEditPage=PageFactory.initElements(driver, ComputerEditPage.class);
 			
+			//click on Add button to add new computer to application
 			computerHomePage.clickAddNewCoumputerButton();
 			
+			//verify the application is on New computer creation page
 			verifyMessageText(computerCreationPage.getComputerCreationHeadePageText(), expectedComputerCreationHeaderText);
 			
-						
+			//set computer name with random generated value
 			computerName=newComputerName+getRandomNumber();
 			
-			
+			//Enter new computer name
 			computerCreationPage.setComputerName(computerName);
 			
+			//Enter introduced date
 			computerCreationPage.setIntroducedDate(introducedDate);
 			
+			//Enter discontinued date
 			computerCreationPage.setDiscontinuedDate(discontinuedDate);
 			
+			//select company name from drop down
 			computerCreationPage.setCompanyName(companyName);
 			
+			//Click on Create button to create computer
 			computerCreationPage.clickAddCoumputerButton();
 			
+			//Verify computer creation successful message 
 			verifyMessageText(computerHomePage.getMessageText(),computerName);
 			
+			//Enter the above created computer name in the home page search box to delete
 			computerHomePage.setComputerNameToSearch(computerName);
 			
+			//Get search result for the provided computer name
 			computerHomePage.clickSearchButton();
 			
+			//this to find the created computer from Table
 			clickTableRow(computerHomePage.getTableWebElement());
 			
+			//verify delete button on the web page
 			isWebElementDisplayed(computerEditPage.isDeleteButtonDisplayed());
 			
-			
+			//click delete button to delete the selected computer
 			computerEditPage.clickDeleteButton();
 			
+			//verify deleted computer message
 			verifyMessageText(computerHomePage.getMessageText(),expectedSuccessDeletionMessageText);
 			
-			System.out.println("*********** deletion successful **************");
+			System.out.println("*********** creation and Deletion successful **************");
 		
 						
 		}catch(Exception e) {
@@ -88,6 +100,10 @@ public class ComputerApplicationCreationAndDeletionTest extends TestInitializati
 	
 	}
 	
+	/**
+	 *  This method to identify element from web table
+	 * @param element
+	 */
 	private void clickTableRow(String element) {
 		List<WebElement> table_rows=driver.findElements(By.xpath(element));
 		if(table_rows.size()>=1) {

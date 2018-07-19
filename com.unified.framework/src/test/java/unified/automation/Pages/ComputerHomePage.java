@@ -53,12 +53,6 @@ public class ComputerHomePage {
 	public String getTableWebElement() {
 		return "//tbody/tr";
 	}
-
-	public String generateRandomNumber() {
-		Random generator= new Random();
-		int number=generator.nextInt(1000);
-		return String.valueOf(number);
-	}
 	
 	public boolean isSuccessMessageDisplayed() {
 		return successMessageText.isDisplayed();

@@ -71,11 +71,10 @@ public class ComputerApplicationCreationAndUpdationTest extends TestInitializati
 			//Verify computer creation successful message 
 			verifyMessageText(computerHomePage.getMessageText(),computerName);
 			
-			//Test will start updating the above created computer
 			//Enter the above created computer name in the home page search box to edit
 			computerHomePage.setComputerNameToSearch(computerName);
 			
-			//to get search result for the provided computer name
+			//Get search result for the provided computer name
 			computerHomePage.clickSearchButton();
 			
 			//this to find the created computer from Table
