@@ -5,7 +5,6 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import unified.automation.Pages.ComputerCreationPage;
@@ -16,13 +15,16 @@ import unified.automation.framework.Utility.TestInitialization;
 
 /**
  * @author r.moharana
- *
+ * Page Object Model- UI test class to create and update computer
+ * It takes test data from TestDataProviderClass.java class
+ * Access all page classes methods
  */
 public class ComputerApplicationCreationAndDeletionTest extends TestInitialization{
 	
 	String computerName=null;
 	
 	/**
+	 *  This method is to create a new Computer and delete the same computer.
 	 * @param newComputerName
 	 * @param introducedDate
 	 * @param discontinuedDate
@@ -36,6 +38,7 @@ public class ComputerApplicationCreationAndDeletionTest extends TestInitializati
 		
 		try {
 			
+			//this initElements methods will create all WebElements for the respective pages
 			ComputerHomePage computerHomePage=PageFactory.initElements(driver, ComputerHomePage.class);
 			ComputerCreationPage computerCreationPage=PageFactory.initElements(driver, ComputerCreationPage.class);
 			ComputerEditPage computerEditPage=PageFactory.initElements(driver, ComputerEditPage.class);
@@ -63,6 +66,7 @@ public class ComputerApplicationCreationAndDeletionTest extends TestInitializati
 			computerHomePage.setComputerNameToSearch(computerName);
 			
 			computerHomePage.clickSearchButton();
+			
 			clickTableRow(computerHomePage.getTableWebElement());
 			
 			isWebElementDisplayed(computerEditPage.isDeleteButtonDisplayed());

@@ -7,7 +7,8 @@ import org.openqa.selenium.support.FindBy;
 
 /**
  * @author r.moharana
- *
+ * Page Object Model- This is Computer Application Home page class for UI test
+ * WebElements locators and Methods that support UI Test
  */
 public class ComputerHomePage {
 	
@@ -40,6 +41,7 @@ public class ComputerHomePage {
 		searchButton.click();
 	}
 	public void clickAddNewCoumputerButton() {
+		addNewComputerButton.isDisplayed();
 		addNewComputerButton.click();
 	}
 	

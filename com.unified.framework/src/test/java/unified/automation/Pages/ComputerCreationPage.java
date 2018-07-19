@@ -4,9 +4,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+
 /**
  * @author r.moharana
- *
+ * Page Object Model- This is Computer Application Creation page class for UI test
+ * WebElements locators and Methods that support UI Test
  */
 public class ComputerCreationPage {
 	

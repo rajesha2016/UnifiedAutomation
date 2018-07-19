@@ -4,6 +4,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+ * @author r.moharana
+ * Page Object Model- This is Computer Application Edit home page class for UI test
+ * WebElements locators and Methods that support UI Test
+ */
 public class ComputerEditPage {
 	
 	@FindBy(xpath="//input[@id='name']")
@@ -32,17 +37,19 @@ public class ComputerEditPage {
 	
 	
 	public void setUpdatedComputerName(String _updatedComputerName) {
-		
+		computerNameTextBox.clear();
 		computerNameTextBox.sendKeys(_updatedComputerName+"_modified");
 	}
 	
 	public void setUpdatedIntroducedDate(String _updatedIntroducedDate) {
 		
+		introducedDateField.clear();
 		introducedDateField.sendKeys(_updatedIntroducedDate);
 	}
 
 	public void setUpdatedDiscontinuedDate(String _updatedDiscontinuedDate) {
 	
+		discontinueddDateField.clear();
 		discontinueddDateField.sendKeys(_updatedDiscontinuedDate);
 	}
 	
@@ -58,24 +65,10 @@ public class ComputerEditPage {
 	}
 	
 	
-	public void clickSaveButton() {
+	public void clickEditSaveButton() {
 		saveUpdatedComputerButton.click();
 	}
 
-	public void clearComputerNameTextField() {
-		computerNameTextBox.clear();
-		
-	}
-	
-	public void clearIntroducedDateField() {
-		introducedDateField.clear();
-		
-	}
-	
-	public void clearDiscontinuedDateField() {
-		discontinueddDateField.clear();
-		
-	}
 	
 	public boolean isDeleteButtonDisplayed() {
 		
