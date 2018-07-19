@@ -15,30 +15,37 @@ public class TestDataProviderClass {
 	 * Rows- Number of times test has to repeated.
 	 * Columns - Number of parameters in test data. 
 	 */
-	@DataProvider(name="AddComputer")
-    public static Object[][] getTestDataforComputerCreation(){
+	@DataProvider(name="TestDataForComputerCreateAndUpdateOperation")
+    public static Object[][] getTestDataforComputerCreateAndUpdate(){
 		
         return new Object[][] {
         	
-            { "r.moharanacomputer003"}
+            { "r.moharanacomputer",
+            	"1999-06-04",
+            	"1999-06-04",
+            	"Apple Inc.",
+            	"Add a computer",
+            	"Edit computer"}
             
         };  
 	}
 	
 	
-	
 	/**
-	 * this method to provide test data for Automated API test
-	 * @return two dimensional Object array.
-	 * Rows- Number of times test has to repeated.
-	 * Columns - Number of parameters in test data.
+	 * @return
 	 */
-	@DataProvider(name="SearchComputer")
-    public static Object[][] getTestDataforAPI(){
+	@DataProvider(name="TestDataForComputerCreateAndDeletionOperation")
+    public static Object[][] getTestDataforComputerCreateAndDelete(){
 		
         return new Object[][] {
         	
-            { "r.moharanacomputer003"}
+            { "r.moharanacomputer",
+            	"1999-06-04",
+            	"1999-06-04",
+            	"Apple Inc.",
+            	"Add a computer",
+            	"Computer has been deleted"
+            	}
             
         };  
 	}

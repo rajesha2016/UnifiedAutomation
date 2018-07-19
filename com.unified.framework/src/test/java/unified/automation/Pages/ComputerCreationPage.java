@@ -2,6 +2,7 @@ package unified.automation.Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * @author r.moharana
@@ -13,10 +14,10 @@ public class ComputerCreationPage {
 	WebElement computerNameTextBox;
 	
 	@FindBy(xpath="//input[@id='introduced']")
-	WebElement introducedDateTextBox;
+	WebElement introducedDateField;
 	
 	@FindBy(xpath="//input[@id='discontinued']")
-	WebElement discontinueddDateTextBox;
+	WebElement discontinueddDateField;
 	
 	@FindBy(xpath="//select[@id='company']")
 	WebElement companyNameDropDown;
@@ -27,6 +28,9 @@ public class ComputerCreationPage {
 	@FindBy(xpath="//a[@class='btn']")
 	WebElement cancelButton;
 	
+	@FindBy(xpath="//section/h1")
+	WebElement computerCreationPageHeaderText;
+	
 	
 	public void setComputerName(String _computerName) {
 		computerNameTextBox.sendKeys(_computerName);
@@ -36,6 +40,22 @@ public class ComputerCreationPage {
 		createComputerButton.click();
 	}
 	
-	
+	public String getComputerCreationHeadePageText() {
+		return computerCreationPageHeaderText.getText().trim();
+	}
 
+	public void setIntroducedDate(String _introduceDate) {
+		
+		introducedDateField.sendKeys(_introduceDate);
+	}
+	
+	public void setDiscontinuedDate(String _discontinuedDate) {
+		
+		discontinueddDateField.sendKeys(_discontinuedDate);
+	}
+
+	public void setCompanyName(String _companyName) {
+		Select selectCompanyName=new Select(companyNameDropDown);
+		selectCompanyName.selectByVisibleText(_companyName);
+	}
 }

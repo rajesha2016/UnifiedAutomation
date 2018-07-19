@@ -29,7 +29,7 @@ public class TestInitialization extends Utilities{
 	@AfterTest
 	public void tearDown(){
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 }

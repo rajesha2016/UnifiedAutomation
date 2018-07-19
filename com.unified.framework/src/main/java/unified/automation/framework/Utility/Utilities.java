@@ -2,6 +2,8 @@ package unified.automation.framework.Utility;
 
 import java.io.FileInputStream;
 import java.util.Properties;
+import java.util.Random;
+
 
 /**
  * @author r.moharana
@@ -30,6 +32,27 @@ public static Properties config=null;
 
 			e.printStackTrace();
 		}
+	}
+	
+	protected boolean verifyMessageText(String actualText,String expectedText) {		
+		if(actualText.contains(expectedText.trim()))
+			return true;
+		
+		return false;
+	}
+	
+	protected String getRandomNumber() {
+		Random generator= new Random();
+		int number=generator.nextInt(2000);
+		return String.valueOf(number);
+	}
+	
+	protected boolean isWebElementDisplayed(boolean condition) {
+		
+		if(condition)
+			return true;
+		
+		return false;
 	}
 
 }

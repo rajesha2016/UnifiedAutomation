@@ -47,11 +47,7 @@ public class ComputerHomePage {
 		return successMessageText.getText().trim();
 	}
 	
-	public void selectComputerFromTable(String _computerToSelect) {
 		
-		
-	}
-	
 	public String getTableWebElement() {
 		return "//tbody/tr";
 	}
@@ -60,5 +56,9 @@ public class ComputerHomePage {
 		Random generator= new Random();
 		int number=generator.nextInt(1000);
 		return String.valueOf(number);
+	}
+	
+	public boolean isSuccessMessageDisplayed() {
+		return successMessageText.isDisplayed();
 	}
 }

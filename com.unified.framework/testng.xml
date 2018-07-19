@@ -3,7 +3,8 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="unified.automation.Test.ComputerApplicationTest"/>
+      <class name="unified.automation.Test.ComputerApplicationCreationAndUpdationTest"/>
+      <class name="unified.automation.Test.ComputerApplicationCreationAndDeletionTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
