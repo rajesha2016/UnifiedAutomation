@@ -34,28 +34,48 @@ public class ComputerCreationPage {
 	WebElement computerCreationPageHeaderText;
 	
 	
+	/**
+	 * @param _computerName to set computer name in computer creation page
+	 */
 	public void setComputerName(String _computerName) {
 		computerNameTextBox.sendKeys(_computerName);
 	}
 	
+	
+	/**
+	 * Submit button to create a new computer
+	 */
 	public void clickAddCoumputerButton() {
 		createComputerButton.click();
 	}
 	
+	 
+	/**
+	 * @return new computer creation page header text
+	 */
 	public String getComputerCreationHeadePageText() {
 		return computerCreationPageHeaderText.getText().trim();
 	}
 
+	/**
+	 * @param _introduceDate
+	 */
 	public void setIntroducedDate(String _introduceDate) {
 		
 		introducedDateField.sendKeys(_introduceDate);
 	}
 	
+	/**
+	 * @param _discontinuedDate
+	 */
 	public void setDiscontinuedDate(String _discontinuedDate) {
 		
 		discontinueddDateField.sendKeys(_discontinuedDate);
 	}
 
+	/**
+	 * @param _companyName selection from drop down
+	 */
 	public void setCompanyName(String _companyName) {
 		Select selectCompanyName=new Select(companyNameDropDown);
 		selectCompanyName.selectByVisibleText(_companyName);

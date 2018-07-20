@@ -1,6 +1,5 @@
 package unified.automation.Pages;
 
-import java.util.Random;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,29 +31,44 @@ public class ComputerHomePage {
 	WebElement successMessageText;
 	
 	
+	/**
+	 * @param _computerToSearch computer name to search on Home page
+	 */
 	public void setComputerNameToSearch(String _computerToSearch) {
 		searchFieldTextBox.sendKeys(_computerToSearch);
 	}
 	
-	
+
+	/**
+	 * method to click search button
+	 */
 	public void clickSearchButton() {
 		searchButton.click();
 	}
+	
+	
+	/**
+	 * verify the Add a new computer button is present on the home if present then click it
+	 */
 	public void clickAddNewCoumputerButton() {
 		addNewComputerButton.isDisplayed();
 		addNewComputerButton.click();
 	}
 	
+	
+	/**
+	 * @return creation, deletion, and Edit success message text
+	 */
 	public String getMessageText() {
 		return successMessageText.getText().trim();
 	}
 	
-		
+	/**
+	 * @return Web table row xpath
+	 */
 	public String getTableWebElement() {
 		return "//tbody/tr";
 	}
 	
-	public boolean isSuccessMessageDisplayed() {
-		return successMessageText.isDisplayed();
-	}
+	
 }

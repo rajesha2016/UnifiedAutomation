@@ -36,45 +36,73 @@ public class ComputerEditPage {
 	WebElement editComputerHeaderText;
 	
 	
+	/**
+	 * @param _updatedComputerName
+	 * updating computer name
+	 */
 	public void setUpdatedComputerName(String _updatedComputerName) {
 		computerNameTextBox.clear();
 		computerNameTextBox.sendKeys(_updatedComputerName+"_modified");
 	}
 	
+	/**
+	 * @param _updatedIntroducedDate
+	 * updating introduced date
+	 */
 	public void setUpdatedIntroducedDate(String _updatedIntroducedDate) {
 		
 		introducedDateField.clear();
 		introducedDateField.sendKeys(_updatedIntroducedDate);
 	}
 
+	/**
+	 * @param _updatedDiscontinuedDate
+	 * updating discontinued date
+	 */
 	public void setUpdatedDiscontinuedDate(String _updatedDiscontinuedDate) {
 	
 		discontinueddDateField.clear();
 		discontinueddDateField.sendKeys(_updatedDiscontinuedDate);
 	}
 	
+	/**
+	 * @param _updatedCompanyName
+	 * updating company name
+	 */
 	public void setUpdatedCompanyName(String _updatedCompanyName) {
 		
 		Select selectCompanyName=new Select(companyNameDropDown);
 		selectCompanyName.selectByVisibleText(_updatedCompanyName);
 	}
 	
+	/**
+	 * @return computer edit page header text
+	 */
 	public String getEditComputerHeaderText() {
 		
 		return editComputerHeaderText.getText().trim();
 	}
 	
 	
+	/**
+	 * submit button for saving modified value
+	 */
 	public void clickEditSaveButton() {
 		saveUpdatedComputerButton.click();
 	}
 
 	
+	/**
+	 * @return true if delete button displayed on the page, else False
+	 */
 	public boolean isDeleteButtonDisplayed() {
 		
 		return deleteButton.isDisplayed();
 	}
 	
+	/**
+	 * click on Delete button to delete the computer
+	 */
 	public void clickDeleteButton() {
 		deleteButton.click();
 	}

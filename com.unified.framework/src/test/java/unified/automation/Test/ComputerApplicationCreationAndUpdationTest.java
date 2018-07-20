@@ -26,8 +26,8 @@ public class ComputerApplicationCreationAndUpdationTest extends TestInitializati
 	
 	/**
 	 * This method is to create a new Computer and update the same computer.
-	 * @param newComputerName
-	 * @param introducedDate
+	 * @param newComputerName name of the computer to be created
+	 * @param introducedDate 
 	 * @param discontinuedDate
 	 * @param companyName
 	 * @param expectedComputerCreationHeaderText

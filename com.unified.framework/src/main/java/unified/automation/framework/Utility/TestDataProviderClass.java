@@ -25,14 +25,18 @@ public class TestDataProviderClass {
             	"1999-06-04",
             	"Apple Inc.",
             	"Add a computer",
-            	"Edit computer"}
+            	"Edit computer"
+            }
             
         };  
 	}
 	
 	
 	/**
-	 * @return
+	 * this method to provide test data for Automated UI test
+	 * @return two dimensional Object array.
+	 * Rows- Number of times test has to repeated.
+	 * Columns - Number of parameters in test data. 
 	 */
 	@DataProvider(name="TestDataForComputerCreateAndDeletionOperation")
     public static Object[][] getTestDataforComputerCreateAndDelete(){
@@ -45,7 +49,7 @@ public class TestDataProviderClass {
             	"Apple Inc.",
             	"Add a computer",
             	"Computer has been deleted"
-            	}
+            }
             
         };  
 	}

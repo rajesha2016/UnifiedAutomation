@@ -34,6 +34,11 @@ public static Properties config=null;
 		}
 	}
 	
+	/**
+	 * @param actualText
+	 * @param expectedText
+	 * @return True if expected text matches with actual test, else False.
+	 */
 	protected boolean verifyMessageText(String actualText,String expectedText) {		
 		if(actualText.contains(expectedText.trim()))
 			return true;
@@ -41,12 +46,21 @@ public static Properties config=null;
 		return false;
 	}
 	
+	
+	/**
+	 * @return a random generated value to test
+	 */
 	protected String getRandomNumber() {
 		Random generator= new Random();
 		int number=generator.nextInt(2000);
 		return String.valueOf(number);
 	}
 	
+	
+	/**
+	 * @param condition
+	 * @return True if web element displayed on the page,else False
+	 */
 	protected boolean isWebElementDisplayed(boolean condition) {
 		
 		if(condition)

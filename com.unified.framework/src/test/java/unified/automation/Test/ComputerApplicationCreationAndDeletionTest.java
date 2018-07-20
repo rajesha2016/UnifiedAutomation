@@ -25,7 +25,7 @@ public class ComputerApplicationCreationAndDeletionTest extends TestInitializati
 	
 	/**
 	 *  This method is to create a new Computer and delete the same computer.
-	 * @param newComputerName
+	 * @param newComputerName name of the computer to be created
 	 * @param introducedDate
 	 * @param discontinuedDate
 	 * @param companyName

@@ -6,8 +6,8 @@ import org.testng.annotations.BeforeTest;
 
 /**
  * @author r.moharana
- * This class initalize UI test and config.properties file
- * Browser driver session starts from here
+ * This class initialize WebDriver and config.properties file
+ * 
  */
 public class TestInitialization extends Utilities{
 	
