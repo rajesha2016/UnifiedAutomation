@@ -14,7 +14,7 @@ Build Tool- Maven
 
 # Framework Understanding:
 
-I have design the framework considering the application stablity and access to web elements and Functionality.
+I have design the framework considering the application stablity and access to web elements and Functionalities.
 
 I have used Singleton Design Pattern of Java to have one session of WebDriver. The implemented class is WebDriverSingleton.java inside "unified.automation.framework.Utility".
 
@@ -28,7 +28,7 @@ config.properties file holds the URL of UI
 
 # Test Execution:
 
-Automation test cases are Priority high test cases. I have covered Creation, Deletion, Searching & Edit functionality for positive test cases.
+I have taken only high priority test cases for Automation tests and covered Creation, Deletion, Searching & Edit functionality for positive test cases.
 
 Clone or download project from the GITHUB url to eclipse and right click on the testng.xml file inside the "com.unified.framework" project and run as TestNG Suite. Another way is run respective classes invdividually from IDE "ComputerApplicationCreationAndUpdationTest.java" and "ComputerApplicationCreationAndDeletionTest.java"
 
