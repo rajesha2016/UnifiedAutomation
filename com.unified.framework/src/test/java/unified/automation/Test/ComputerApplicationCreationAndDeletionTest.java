@@ -19,8 +19,9 @@ import unified.automation.framework.Utility.TestInitialization;
  * It takes test data from TestDataProviderClass.java class
  * Access all page classes methods
  */
-public class ComputerApplicationCreationAndDeletionTest extends TestInitialization{
+public class ComputerApplicationCreationAndDeletionTest extends TestInitialization{	
 	
+
 	String computerName=null;
 	
 	/**

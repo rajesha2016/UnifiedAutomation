@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="Test">
+  <test name="CrossBrowserFirfoxTest">
+  <parameter name="browser" value="firefox"></parameter>
     <classes>
-      <class name="unified.automation.Test.ComputerApplicationCreationAndUpdationTest"/>
       <class name="unified.automation.Test.ComputerApplicationCreationAndDeletionTest"/>
     </classes>
   </test> <!-- Test -->
+  
+<test name="CrossBrowserChromeTest">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="unified.automation.Test.ComputerApplicationCreationAndUpdationTest"/>
+    </classes>
+  </test>
+
 </suite> <!-- Suite -->
