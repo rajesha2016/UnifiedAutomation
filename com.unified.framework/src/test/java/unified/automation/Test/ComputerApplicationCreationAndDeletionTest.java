@@ -96,9 +96,7 @@ public class ComputerApplicationCreationAndDeletionTest extends TestInitializati
 		
 			System.out.println("Exception "+e+" occured during execution");			
 		}
-	
 		
-	
 	}
 	
 	/**
